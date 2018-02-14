@@ -1,0 +1,42 @@
+[options]
+font = Roboto mono 13
+cursor_shape = ibeam
+
+[colors]
+# special
+foreground      = #D0D0D0
+foreground_bold = #D0D0D0
+cursor          = #D0D0D0
+background			= #1C1C1C
+
+# black
+color0  = #212121
+color8  = #757575
+
+# red
+color1  = #E53935
+color9  = #EF5350
+
+# green
+color2  = #7CB342
+color10 = #9CCC65
+
+# yellow
+color3  = #FFB300
+color11 = #FFCA28
+
+# blue
+color4  = #039BE5
+color12 = #29B6F6
+
+# magenta //-> purple actually
+color5  = #00897B
+color13 = #26A69A
+
+# cyan
+color6  = #00ACC1
+color14 = #26C6DA
+
+# white
+color7  = #BDBDBD
+color15 = #FFFFFF

@@ -1,0 +1,44 @@
+[global]
+	font = inconsolata-g
+	allow_markup = yes
+	format = "<b>%s\n</b>%b"
+	sort = yes
+	indicate_hidden = yes
+	alignment = center
+	bouce_freq = 0
+	show_age_threshold = 120
+	word_wrap = yes
+	ignore_newline = no
+	geometry = "300x50-5+5"
+	transparency = 0
+	idle_threshold = 500
+	monitor = 0
+	follow = mouse
+	sticky_history = no
+	line_height = 0
+	separator_height = 2
+	padding = 15
+	horizontal_padding = 2
+	separator_color = "#4E4E4E"
+	startup_notification = false
+	browser = /usr/bin/chromium
+[frame]
+	width = 0
+	color = "#455A64"
+[shortcuts]
+	close = ctrl+space
+	close_all = ctrl+shift+space
+	history = ctrl+grave
+	context = ctrl+shift+period
+[urgency_low]
+	background = "#263238"
+	foreground = "#CFD8DC"
+	timeout = 5
+[urgency_normal]
+	background = "#263238"
+	foreground = "#CFD8DC"
+	timeout = 5
+[urgency_critical]
+	background = "#F44336"
+	foreground = "#CFD8DC"
+	timeout = 10

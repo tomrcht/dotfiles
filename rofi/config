@@ -1,0 +1,25 @@
+rofi.modi: window,drun,run
+
+rofi.fullscreen: true
+rofi.padding: 370
+
+rofi.font:	Roboto mono 24
+
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.bw: 0
+
+rofi.display-drun: run
+rofi.display-run: exec
+
+rofi.terminal: termite
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:d42e3440, argb:0000000, #1aa662
+rofi.color-normal: argb:1000000, #84d498, argb:0000000, #23ff77, #2e3440
+rofi.color-active: argb:0000000, #50fa7b, argb:0000000, #85fa86, #2e3440
+rofi.color-urgent: argb:0000000, #1aa662, argb:0000000, #1aa662, #2e3440
+
