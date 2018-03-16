@@ -12,6 +12,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'keith/swift.vim'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/nvim/symlink.sh' }
 Plug 'fatih/vim-go'
+Plug 'alisdair/vim-armasm'
 
 Plug 'roxma/nvim-completion-manager'
 Plug 'honza/vim-snippets'
