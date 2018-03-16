@@ -1,7 +1,8 @@
 call plug#begin('~/.vim/plugged')
 " Colors scheme & airline
 Plug 'hzchirs/vim-material'
-Plug 'arcticicestudio/nord-vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'kudabux/vim-srcery-drk'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -9,6 +10,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Languages & syntax
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'keith/swift.vim'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/nvim/symlink.sh' }
+Plug 'fatih/vim-go'
 
 Plug 'roxma/nvim-completion-manager'
 Plug 'honza/vim-snippets'
@@ -41,10 +44,11 @@ let $SHELL = '/bin/bash'
 " italic font
 " bold font
 if has("termguicolors")
-  set termguicolors
+	set termguicolors
 endif
 set background=dark
-colorscheme vim-material
+set t_Co=256
+colorscheme srcery-drk
 let g:enable_italic_font = 1
 let g:enable_bold_font = 1
 
@@ -93,7 +97,10 @@ noremap <C-J> }
 noremap <C-K> {
 
 " Highlight whitespace
+" Strip Whitespace
 set list
+let g:strip_whitespace_on_save=1
+highlight ExtraWhitespace ctermbg=red
 
 "Buffers integration
 "Buffers can be hidden but still alive
