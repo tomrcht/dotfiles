@@ -8,3 +8,6 @@ set -g -x PATH /bin /sbin /usr/bin /usr/sbin /usr/local/go/bin $HOME/.cargo/bin 
 
 source /Users/octocat/.config/fish/aliases
 set fish_greeting ""
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/octocat/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/octocat/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/Users/octocat/Downloads/google-cloud-sdk/path.fish.inc'; end; end

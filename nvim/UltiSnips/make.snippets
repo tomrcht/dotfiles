@@ -7,16 +7,24 @@ snippet makefile "Makefile" b
 ## Makefile
 ##
 
+CC			=	gcc
+
 NAME		=	$1
 
-CC			=	gcc
+SRCDIR		=	sources
+SRC			=	main.c
+SRC			:=	$(addprefix, $(SRCDIR)/, $(SRC))
 
 OBJ			=	$(SRC:.c=.o)
 
-CFLAGS		+=	-Wall -Wextra -Werror -Wshadow
-CPPFLAGA	+=	-Iinclude/
+CFLAGS		+=	-Wall -Wextra -Wshadow
+CPPFLAGS	+=	-Iinclude/
 
-SRC			+=	main.c
+ifeq (${debug}, 1)
+	CFLAGS	+=	-g3
+else
+	CFLAGS	+=	-Werror
+endif
 
 all:	$(NAME)
 
