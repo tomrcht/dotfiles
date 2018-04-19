@@ -259,8 +259,7 @@ set secure
 
 "Indentation
 set noet ci pi sts=0 sw=4 ts=4
-set listchars=tab:\|\ ,trail:~
+set listchars=tab:\·\ ,trail:~
 if !empty($EPITECH_PATH) && getcwd() =~ $EPITECH_PATH
   set sts=0 sw=8 ts=8
 endif
-
