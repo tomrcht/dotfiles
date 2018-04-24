@@ -13,7 +13,7 @@ NAME		=	$1
 
 SRCDIR		=	sources
 SRC			=	main.c
-SRC			:=	$(addprefix, $(SRCDIR)/, $(SRC))
+SRC			:=	$(addprefix $(SRCDIR)/, $(SRC))
 
 OBJ			=	$(SRC:.c=.o)
 
