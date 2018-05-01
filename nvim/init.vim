@@ -15,6 +15,7 @@ Plug 'fatih/vim-go'
 Plug 'alisdair/vim-armasm'
 
 Plug 'roxma/nvim-completion-manager'
+Plug 'Valloric/YouCompleteMe'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
@@ -38,6 +39,10 @@ set nosmartindent
 
 "Change shell (env variable) for FZF
 let $SHELL = '/bin/bash'
+
+" ycm conf file
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 
 "Colors
 " background contrast
