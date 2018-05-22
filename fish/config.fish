@@ -9,4 +9,4 @@ source /Users/hoodie/.config/fish/aliases
 set fish_greeting ""
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hoodie/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/hoodie/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/Users/hoodie/Downloads/google-cloud-sdk/path.fish.inc'; end; end
+if [ -f '/Users/hoodie/Documents/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/hoodie/Documents/google-cloud-sdk/path.fish.inc'; else; . '/Users/hoodie/Documents/google-cloud-sdk/path.fish.inc'; end; end

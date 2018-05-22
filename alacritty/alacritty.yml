@@ -3,17 +3,21 @@ env:
 
 window:
   dimensions:
-    columns: 175
-    lines: 45
+    columns: 150
+    lines: 35
 
   padding:
-    x: 4
-    y: 4
+    x: 5
+    y: 5
 
-  decorations: true
+  dpi:
+    x: 128
+    y: 128
+
+  decorations: buttonless
+    #decorations: transparent
 
 tabspaces: 4
-
 draw_bold_text_with_bright_colors: true
 
 font:
@@ -68,7 +72,6 @@ visual_bell:
   animation: EaseOutExpo
   duration: 0
 
-# Background opacity
 background_opacity: 1.0
 
 # Mouse bindings
