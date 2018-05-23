@@ -8,14 +8,13 @@ window:
 
   padding:
     x: 5
-    y: 5
+    y: 35
 
   dpi:
     x: 128
     y: 128
 
-  decorations: buttonless
-    #decorations: transparent
+  decorations: transparent #buttonless will remove even the three action buttons
 
 tabspaces: 4
 draw_bold_text_with_bright_colors: true
