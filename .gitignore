@@ -10,3 +10,10 @@ gcloud/
 *.backup
 filezilla/
 neofetch/
+nvim.old/
+nvim/autoload/
+nvim/ftdetect/
+nvim/ftplugin/
+nvim/plugged/
+nvim/plugin/
+nvim/syntax/
