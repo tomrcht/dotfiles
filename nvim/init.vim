@@ -11,31 +11,27 @@ call plug#begin('~/.config/nvim/plugged')
 	abbr attribtue attribute
 	abbr attribuet attribute
 
-	set autoread " detect when a file is changed
+	set autoread
 
-	set history=1000 " change history to 1000
+	set history=1000
 	set textwidth=120
 
 	set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 	set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 	if (has('nvim'))
-		" show results of substition as they're happening
-		" but don't open a split
 		set inccommand=nosplit
 	endif
 
-	"set backspace=indent,eol,start " make backspace behave in a sane manner
 	set clipboard=unnamed
 
 	" Searching
-	set ignorecase " case insensitive searching
-	set smartcase " case-sensitive if expresson contains a capital letter
-	set hlsearch " highlight search results
-	set incsearch " set incremental search, like modern browsers
-	set nolazyredraw " don't redraw while executing macros
-
-	set magic " Set magic on, for regex
+	set ignorecase
+	set smartcase
+	set hlsearch
+	set incsearch
+	set nolazyredraw
+	set magic
 
 	" error bells
 	set noerrorbells
@@ -46,55 +42,54 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Appearance {{{
 	set cursorline
-	set number " show line numbers
+	set number
 	set relativenumber
-	"set wrap " turn on line wrapping
-	"set wrapmargin=8 " wrap lines when coming within n characters from side
-	"set linebreak " set soft wrapping
-	"set showbreak=… " show ellipsis at breaking
-	set ttyfast " faster redrawing
+	set wrap
+	set wrapmargin=8
+	set linebreak
+	set showbreak=…
+	set ttyfast
 	set diffopt+=vertical
-	set laststatus=2 " show the satus line all the time
-	set so=7 " set 7 lines to the cursors - when moving vertical
-	set wildmenu " enhanced command line completion
-	set hidden " current buffer can be put into background
-	set showcmd " show incomplete commands
-	set noshowmode " don't show which mode disabled for PowerLine
-	set wildmode=list:longest " complete files like a shell
-	set scrolloff=5 " lines of text around cursor
+	set laststatus=2
+	set so=7
+	set wildmenu
+	set hidden
+	set showcmd
+	set noshowmode
+	set wildmode=list:longest
+	set scrolloff=5
 	set shell=$SHELL
-	set cmdheight=1 " command bar height
-	set title " set terminal title
-	set showmatch " show matching braces
+	set cmdheight=1
+	set title
+	set showmatch
 
 	" Tab control
 	set autoindent
-	set noexpandtab " insert tabs rather than spaces for <Tab>
-	set tabstop=4 " the visible width of tabs
-	set shiftwidth=4 " number of spaces to use for indent and unindent
+	set noexpandtab
+	set tabstop=4
+	set shiftwidth=4
 	"set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
 	"set softtabstop=4 " edit as if the tabs are 4 characters wide
 	"set shiftround " round indent to a multiple of 'shiftwidth'
 
 	" code folding settings
-	set foldmethod=syntax " fold based on indent
+	set foldmethod=syntax
 	set foldlevelstart=99
-	set foldnestmax=10 " deepest fold is 10 levels
-	set nofoldenable " don't fold by default
+	set foldnestmax=10
+	set nofoldenable
 	set foldlevel=1
 
 	" toggle invisible characters
 	set list
 	set listchars=tab:\·\ ,trail:~,extends:❯,precedes:❮
 
-	set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
+	set t_Co=256
 	" switch cursor to line when in insert mode, and block when not
 	set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 	\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
 	\,sm:block-blinkwait175-blinkoff150-blinkon175
 
 	if &term =~ '256color'
-		" disable background color erase
 		set t_ut=
 	endif
 
@@ -170,7 +165,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 		function! LightlineFileType()
 			return WebDevIconsGetFileTypeSymbol()
-			" return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 		endfunction
 
 		function! LightlineLinter() abort
@@ -270,8 +264,6 @@ call plug#begin('~/.config/nvim/plugged')
 	nnoremap <silent> ^ g^
 	nnoremap <silent> $ g$
 
-	nnoremap <silent> <leader>u :call functions#HtmlUnEscape()<cr>
-
 	command! Rm call functions#Delete()
 	command! RM call functions#Delete() <Bar> q!
 " }}}
@@ -328,9 +320,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 	" add end, endif, etc. automatically
 	Plug 'tpope/vim-endwise'
-
-	" a simple tool for presenting slides in vim based on text files
-	Plug 'sotte/presenting.vim', { 'for': 'markdown' }
 
 	" Close buffers but keep splits
 	Plug 'moll/vim-bbye'
@@ -500,12 +489,8 @@ call plug#begin('~/.config/nvim/plugged')
 		let g:tsuquyomi_completion_detail = 1
 	" }}}
 
-
-	" Styles {{{
-		Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
-	" }}}
-
 	" markdown {{{
+		Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
 		Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 
 		" Open markdown files in Marked.app - mapped to <leader>m
@@ -521,26 +506,37 @@ call plug#begin('~/.config/nvim/plugged')
 	" }}}
 
 	Plug 'fatih/vim-go', { 'for': 'go' }
+
+	" autocomplete {{{
+		Plug 'Valloric/YouCompleteMe'
+		let g:ycm_server_python_interpreter = '/usr/bin/python'
+		let g:ycm_global_ycm_extra_conf = '/Users/hoodie/.config/nvim/.ycm_extra_conf.py'
+		let g:ycm_autoclose_preview_window_after_insertion = 1
+		let g:ycm_autoclose_preview_window_after_completion = 1
+		let g:ycm_add_preview_to_completeopt = 0
+		set completeopt-=preview
+	" }}}
 " }}}
 
-	Plug 'arcticicestudio/nord-vim'
+"	Plug 'arcticicestudio/nord-vim'
+	Plug 'trusktr/seti.vim'
 call plug#end()
 
 " Colorscheme and final setup {{{
 	set background=dark
-	colorscheme nord
+	colorscheme seti
 	let g:enable_italic_font = 1
 	let g:enable_bold_font = 1
 	syntax on
 	filetype plugin indent on
-	" make the highlighting of tabs and other non-text less annoying
 	highlight SpecialKey ctermfg=236
 	highlight NonText ctermfg=236
 
-	" make comments and HTML attributes italic
 	highlight Comment cterm=italic
 	highlight Type cterm=italic
 	highlight Normal ctermbg=none
+	highlight clear SignColumn
+
 
 	inoremap jj <Esc>
 	nnoremap qq :nohl<CR>
