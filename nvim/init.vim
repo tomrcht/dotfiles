@@ -475,7 +475,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" JavaScript {{{
 		Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
 		Plug 'moll/vim-node', { 'for': 'javascript' }
-		Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] }
 		Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
 	" }}}
 
@@ -515,6 +514,9 @@ call plug#begin('~/.config/nvim/plugged')
 		let g:ycm_autoclose_preview_window_after_completion = 1
 		let g:ycm_add_preview_to_completeopt = 0
 		set completeopt-=preview
+	" }}}
+	" jsx {{{
+		Plug 'mxw/vim-jsx'
 	" }}}
 " }}}
 
