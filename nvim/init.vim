@@ -1,4 +1,4 @@
-call functions#PlugLoad()
+"call functions#PlugLoad()
 call plug#begin('~/.config/nvim/plugged')
 
 " General {{{
@@ -84,10 +84,11 @@ call plug#begin('~/.config/nvim/plugged')
 	set listchars=tab:\·\ ,trail:~,extends:❯,precedes:❮
 
 	set t_Co=256
-	" switch cursor to line when in insert mode, and block when not
-	set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
-	\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-	\,sm:block-blinkwait175-blinkoff150-blinkon175
+	"set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+	"\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+	"\,sm:block-blinkwait175-blinkoff150-blinkon175
+
+	set guicursor=
 
 	if &term =~ '256color'
 		set t_ut=
@@ -104,7 +105,7 @@ call plug#begin('~/.config/nvim/plugged')
 	" LightLine {{{
 		Plug 'itchyny/lightline.vim'
 		let g:lightline = {
-		\	'colorscheme': 'wombat',
+		\	'colorscheme': 'jellybeans',
 		\	'active': {
 		\		'left': [ [ 'mode', 'paste' ],
 		\				[ 'gitbranch' ],
@@ -522,17 +523,20 @@ call plug#begin('~/.config/nvim/plugged')
 
 "	Plug 'arcticicestudio/nord-vim'
 	Plug 'trusktr/seti.vim'
+	Plug 'joshdick/onedark.vim'
+	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Colorscheme and final setup {{{
 	set background=dark
-	colorscheme seti
+	colorscheme onedark
 	let g:enable_italic_font = 1
 	let g:enable_bold_font = 1
 	syntax on
 	filetype plugin indent on
 	highlight SpecialKey ctermfg=236
 	highlight NonText ctermfg=236
+	set encoding=utf-8
 
 	highlight Comment cterm=italic
 	highlight Type cterm=italic
