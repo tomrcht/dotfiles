@@ -66,8 +66,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" Tab control
 	set autoindent
 	set noexpandtab
-	set tabstop=4
-	set shiftwidth=4
+	set tabstop=2
+	set shiftwidth=2
 	"set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
 	"set softtabstop=4 " edit as if the tabs are 4 characters wide
 	"set shiftround " round indent to a multiple of 'shiftwidth'

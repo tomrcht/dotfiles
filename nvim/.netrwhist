@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/hoodie/.config/fish'
-let g:netrw_dirhist_2='/Users/hoodie/development/react/shokiMovies/node_modules/react-native-elements'
-let g:netrw_dirhist_3='/Users/hoodie/development/go/src/intrastek/app'
-let g:netrw_dirhist_4='/Users/hoodie/development/go/src/intrastek/.git'

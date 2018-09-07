@@ -3,7 +3,6 @@ set -g -x USER_NICKNAME "Hoodie"
 set -g -x PAGER "most"
 
 set -g -x GOPATH $HOME/development/go
-set -g -x FLUTTERPATH $HOME/development/flutter/bin
 set -g -x EPITECH_PATH $HOME/development/epitech
 set -g -x PATH /bin /sbin /usr/bin /usr/sbin /usr/local/go/bin $GOPATH/bin $PATH
 
