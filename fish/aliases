@@ -6,9 +6,9 @@ alias valeak='valgrind --leak-check=full'
 alias vatrack='valgrind -v --track-origins=yes'
 
 alias ldd='otool -L'
-alias objdump='gobjdump'
-alias objcopy='gobjcopy'
-alias nm='gnm'
+#alias objdump='gobjdump'
+#alias objcopy='gobjcopy'
+#alias nm='gnm'
 
 alias v='nvim'
 alias vim='nvim'

@@ -17,3 +17,9 @@ nvim/ftplugin/
 nvim/plugged/
 nvim/plugin/
 nvim/syntax/
+.mono
+NuGet
+wireshark
+xbuild
+stetic
+pgcli

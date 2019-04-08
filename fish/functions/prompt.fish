@@ -52,6 +52,6 @@ end
 	if test $last_status != 0
 		set prompt_color $red
 	end
-	echo -e ''
+#	echo -e ''
 	echo -e -n -s $prompt_color '⟩ ' $normal
 end

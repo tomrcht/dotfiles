@@ -44,8 +44,8 @@ call plug#begin('~/.config/nvim/plugged')
 	set cursorline
 	set number
 	set relativenumber
-	set wrap
-	set wrapmargin=8
+	" set wrap
+	" set wrapmargin=8
 	set linebreak
 	set showbreak=…
 	set ttyfast
