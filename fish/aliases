@@ -11,7 +11,7 @@ alias ldd='otool -L'
 #alias nm='gnm'
 
 alias v='nvim'
-alias vim='nvim'
+#alias vim='nvim'
 alias py='python3'
 
 alias goapp="dev_appserver.py"

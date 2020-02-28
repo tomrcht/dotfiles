@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " General {{{
 	" Abbreviations
+	set guicursor=
 	abbr funciton function
 	abbr teh the
 	abbr tempalte template
@@ -46,6 +47,8 @@ call plug#begin('~/.config/nvim/plugged')
 	set relativenumber
 	" set wrap
 	" set wrapmargin=8
+	set textwidth=0
+	set wrapmargin=0
 	set linebreak
 	set showbreak=…
 	set ttyfast
@@ -504,8 +507,10 @@ call plug#begin('~/.config/nvim/plugged')
 		Plug 'elzr/vim-json', { 'for': 'json' }
 		let g:vim_json_syntax_conceal = 0
 	" }}}
-
-	Plug 'fatih/vim-go', { 'for': 'go' }
+	
+	" Swift {{{
+		Plug 'keith/swift.vim', { 'for': 'swift' }
+	" }}}
 
 	" autocomplete {{{
 		Plug 'Valloric/YouCompleteMe'
@@ -545,6 +550,7 @@ call plug#end()
 
 
 	inoremap jj <Esc>
+	nnoremap gg :Goyo<CR>
 	nnoremap qq :nohl<CR>
 	noremap <C-J> }
 	noremap <C-K> {
