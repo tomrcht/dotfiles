@@ -550,7 +550,7 @@ call plug#end()
 
 
 	inoremap jj <Esc>
-	nnoremap gg :Goyo<CR>
+	nnoremap go :Goyo<CR>
 	nnoremap qq :nohl<CR>
 	noremap <C-J> }
 	noremap <C-K> {
