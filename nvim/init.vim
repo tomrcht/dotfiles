@@ -555,8 +555,4 @@ call plug#end()
 	noremap <C-J> }
 	noremap <C-K> {
 	noremap ff :FZF <CR>
-
-"	if !empty($EPITECH_PATH) && getcwd() =~ $EPITECH_PATH
-"		set sts=0 sw=8 ts=8
-"	endif
 " }}}
