@@ -12,6 +12,3 @@ source /Users/tom/.config/fish/aliases
 set fish_greeting ''
 
 thefuck --alias | source
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tom/source/gcloud/path.fish.inc' ]; . '/Users/tom/source/gcloud/path.fish.inc'; end
