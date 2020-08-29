@@ -14,8 +14,6 @@ alias v='nvim'
 #alias vim='nvim'
 alias py='python3'
 
-alias goapp="dev_appserver.py"
-
 alias ls='exa'
 alias l='exa -laa'
 alias ll='exa -l'
