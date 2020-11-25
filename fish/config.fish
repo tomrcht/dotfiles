@@ -16,3 +16,5 @@ thefuck --alias | source
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/tom/source/gcloud/path.fish.inc' ]; . '/Users/tom/source/gcloud/path.fish.inc'; end
+
+starship init fish | source

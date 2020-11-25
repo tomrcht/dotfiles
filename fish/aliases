@@ -21,3 +21,5 @@ alias tree='exa --tree'
 
 alias top='htop'
 alias p='ping 8.8.8.8'
+
+alias ydl='youtube-dl'

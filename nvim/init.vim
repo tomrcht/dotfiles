@@ -470,8 +470,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" }}}
 
 	" UltiSnips {{{
-		Plug 'SirVer/ultisnips' " Snippets plugin
-		let g:UltiSnipsExpandTrigger="<tab>"
+	" Plug 'SirVer/ultisnips' " Snippets plugin
+	"	let g:UltiSnipsExpandTrigger="<tab>"
 	" }}}
 " }}}
 
@@ -513,28 +513,27 @@ call plug#begin('~/.config/nvim/plugged')
 	" }}}
 
 	" autocomplete {{{
-		Plug 'Valloric/YouCompleteMe'
-		let g:ycm_server_python_interpreter = '/usr/bin/python'
-		let g:ycm_global_ycm_extra_conf = '/Users/hoodie/.config/nvim/.ycm_extra_conf.py'
-		let g:ycm_autoclose_preview_window_after_insertion = 1
-		let g:ycm_autoclose_preview_window_after_completion = 1
-		let g:ycm_add_preview_to_completeopt = 0
-		set completeopt-=preview
-	" }}}
-	" jsx {{{
-		Plug 'mxw/vim-jsx'
+	" Plug 'Valloric/YouCompleteMe'
+	"	let g:ycm_server_python_interpreter = '/usr/bin/python'
+	"	let g:ycm_global_ycm_extra_conf = '/Users/hoodie/.config/nvim/.ycm_extra_conf.py'
+	"	let g:ycm_autoclose_preview_window_after_insertion = 1
+	"	let g:ycm_autoclose_preview_window_after_completion = 1
+	"	let g:ycm_add_preview_to_completeopt = 0
+	"	set completeopt-=preview
 	" }}}
 " }}}
 
 "	Plug 'arcticicestudio/nord-vim'
-	Plug 'trusktr/seti.vim'
-	Plug 'joshdick/onedark.vim'
+"	Plug 'joshdick/onedark.vim'
+"	Plug 'trusktr/seti.vim'
+	Plug 'ayu-theme/ayu-vim'
 	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Colorscheme and final setup {{{
 	set background=dark
-	colorscheme onedark
+	let ayucolor="dark"
+	colorscheme ayu
 	let g:enable_italic_font = 1
 	let g:enable_bold_font = 1
 	syntax on
