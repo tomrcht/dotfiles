@@ -87,9 +87,6 @@ call plug#begin('~/.config/nvim/plugged')
 	set listchars=tab:\·\ ,trail:~,extends:❯,precedes:❮
 
 	set t_Co=256
-	"set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
-	"\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-	"\,sm:block-blinkwait175-blinkoff150-blinkon175
 
 	set guicursor=
 
@@ -313,9 +310,6 @@ call plug#begin('~/.config/nvim/plugged')
 	" enables repeating other supported plugins with the . command
 	Plug 'tpope/vim-repeat'
 
-	" asynchronous build and test dispatcher
-	Plug 'tpope/vim-dispatch'
-
 	" single/multi line code handler: gS - split one line into multiple, gJ - combine multiple lines into one
 	Plug 'AndrewRadev/splitjoin.vim'
 
@@ -334,7 +328,7 @@ call plug#begin('~/.config/nvim/plugged')
 		Plug 'junegunn/goyo.vim'
 		let g:limelight_conceal_ctermfg = 240
 
-        let g:goyo_entered = 0
+    let g:goyo_entered = 0
 		function! s:goyo_enter()
 			silent !tmux set status off
             let g:goyo_entered = 1
@@ -403,7 +397,7 @@ call plug#begin('~/.config/nvim/plugged')
 		nmap <silent> <leader>s :GFiles?<cr>
 
 		nmap <silent> <leader>r :Buffers<cr>
-		nmap <silent> <leader>e :FZF<cr>
+		nmap <silent> <leader>f :FZF<cr>
 		nmap <leader><tab> <plug>(fzf-maps-n)
 		xmap <leader><tab> <plug>(fzf-maps-x)
 		omap <leader><tab> <plug>(fzf-maps-o)
@@ -441,9 +435,9 @@ call plug#begin('~/.config/nvim/plugged')
 	" vim-fugitive {{{
 		Plug 'tpope/vim-fugitive'
 		Plug 'tpope/vim-rhubarb' " hub extension for fugitive
-        Plug 'junegunn/gv.vim'
-        Plug 'sodapopcan/vim-twiggy'
-        Plug 'christoomey/vim-conflicted'
+    Plug 'junegunn/gv.vim'
+    Plug 'sodapopcan/vim-twiggy'
+    Plug 'christoomey/vim-conflicted'
 		nmap <silent> <leader>gs :Gstatus<cr>
 		nmap <leader>ge :Gedit<cr>
 		nmap <silent><leader>gr :Gread<cr>
@@ -463,15 +457,10 @@ call plug#begin('~/.config/nvim/plugged')
 		\}
 		let g:ale_fixers = {}
 		let g:ale_fixers['javascript'] = ['prettier']
-        let g:ale_fixers['typescript'] = ['prettier', 'tslint']
+    let g:ale_fixers['typescript'] = ['prettier', 'tslint']
 		let g:ale_fixers['json'] = ['prettier']
 		let g:ale_javascript_prettier_use_local_config = 1
 		let g:ale_fix_on_save = 0
-	" }}}
-
-	" UltiSnips {{{
-	" Plug 'SirVer/ultisnips' " Snippets plugin
-	"	let g:UltiSnipsExpandTrigger="<tab>"
 	" }}}
 " }}}
 
@@ -486,7 +475,7 @@ call plug#begin('~/.config/nvim/plugged')
 		Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 		Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
-        Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
+    Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
 		let g:tsuquyomi_completion_detail = 1
 		let g:tsuquyomi_disable_default_mappings = 1
 		let g:tsuquyomi_completion_detail = 1
@@ -511,21 +500,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" Swift {{{
 		Plug 'keith/swift.vim', { 'for': 'swift' }
 	" }}}
-
-	" autocomplete {{{
-	" Plug 'Valloric/YouCompleteMe'
-	"	let g:ycm_server_python_interpreter = '/usr/bin/python'
-	"	let g:ycm_global_ycm_extra_conf = '/Users/hoodie/.config/nvim/.ycm_extra_conf.py'
-	"	let g:ycm_autoclose_preview_window_after_insertion = 1
-	"	let g:ycm_autoclose_preview_window_after_completion = 1
-	"	let g:ycm_add_preview_to_completeopt = 0
-	"	set completeopt-=preview
-	" }}}
 " }}}
 
-"	Plug 'arcticicestudio/nord-vim'
-"	Plug 'joshdick/onedark.vim'
-"	Plug 'trusktr/seti.vim'
 	Plug 'ayu-theme/ayu-vim'
 	Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -547,11 +523,10 @@ call plug#end()
 	highlight Normal ctermbg=none
 	highlight clear SignColumn
 
-
 	inoremap jj <Esc>
 	nnoremap go :Goyo<CR>
 	nnoremap qq :nohl<CR>
+	noremap ff :FZF <CR>
 	noremap <C-J> }
 	noremap <C-K> {
-	noremap ff :FZF <CR>
 " }}}
