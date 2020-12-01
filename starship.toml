@@ -1,5 +1,5 @@
 format = """
-($cmd_duration)· ($directory)($git_status) ($git_branch)($git_commit)
+($cmd_duration)· ($directory)($git_branch)($git_status)($git_commit)
 ($swift)$character"""
 
 [character]

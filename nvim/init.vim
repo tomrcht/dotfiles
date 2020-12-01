@@ -492,6 +492,9 @@ call plug#begin('~/.config/nvim/plugged')
 		nmap <leader>* *<c-o>:%s///gn<cr>
 	" }}}
 
+	" TOML {{{
+		Plug 'cespare/vim-toml', { 'for': 'toml' }
+	" }}}
 	" JSON {{{
 		Plug 'elzr/vim-json', { 'for': 'json' }
 		let g:vim_json_syntax_conceal = 0
