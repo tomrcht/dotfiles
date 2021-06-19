@@ -1,0 +1,38 @@
+format = """
+($cmd_duration)· ($directory)($git_branch)($git_status)($git_commit)
+$character"""
+
+[character]
+success_symbol = '[⟩](bold white)'
+error_symbol = '[⟩](bold red)'
+
+[cmd_duration]
+format = '\([$duration](bold yellow)\) '
+min_time = 5_000
+style = 'bold yellow'
+
+[directory]
+format = '[$path](bold cyan) [$read_only]($read_only_style)'
+truncation_length = 8
+truncation_symbol = "…/"
+read_only = 'read only'
+read_only_style = 'bold red'
+
+[git_branch]
+format = '[$branch]($style)'
+style = 'bold white'
+
+[git_commit]
+format = ' [\($hash\)]($style)'
+only_detached = false
+style = 'bold blue'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style))'
+style = 'bold red'
+conflicted = '!'
+untracked = '?'
+modified = '±'
+stashed = ''
+renamed = ''
+
