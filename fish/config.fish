@@ -14,4 +14,4 @@ set fish_greeting ''
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/tom/source/tools/gcloud/path.fish.inc' ]; . '/Users/tom/source/tools/gcloud/path.fish.inc'; end
 
-starship init fish | source
+# starship init fish | source

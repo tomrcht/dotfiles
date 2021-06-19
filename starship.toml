@@ -1,10 +1,8 @@
 format = """
 ($cmd_duration)· ($directory)($git_branch)($git_status)($git_commit)
-($swift)$character"""
+$character"""
 
 [character]
-format = '$symbol '
-symbol = '⟩'
 success_symbol = '[⟩](bold white)'
 error_symbol = '[⟩](bold red)'
 
@@ -38,7 +36,3 @@ modified = '±'
 stashed = ''
 renamed = ''
 
-[swift]
-format = '[$symbol]($style) '
-symbol = ''
-style = 'bold 202'
