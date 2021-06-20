@@ -101,6 +101,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 	" highlight conflicts
 	match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
+	" Airline
+	Plug 'vim-airline/vim-airline' 
+	Plug 'vim-airline/vim-airline-themes'
 " }}}
 
 " General Mappings {{{
