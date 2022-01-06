@@ -320,14 +320,12 @@ call plug#begin('~/.config/nvim/plugged')
 
     " vim-fugitive {{{
         Plug 'tpope/vim-fugitive'
-        Plug 'tpope/vim-rhubarb' " hub extension for fugitive
-    Plug 'junegunn/gv.vim'
-    Plug 'sodapopcan/vim-twiggy'
-    Plug 'christoomey/vim-conflicted'
-        nmap <silent> <leader>gs :Gstatus<cr>
+        Plug 'junegunn/gv.vim'
+        Plug 'christoomey/vim-conflicted'
+        nmap <silent> <leader>gs :G<cr>
         nmap <leader>ge :Gedit<cr>
         nmap <silent><leader>gr :Gread<cr>
-        nmap <silent><leader>gb :Gblame<cr>
+        nmap <silent><leader>gb :G blame<cr>
     " }}}
 
     " ALE {{{
@@ -337,45 +335,39 @@ call plug#begin('~/.config/nvim/plugged')
         let g:ale_sign_error = '✖'
         let g:ale_sign_warning = '⚠'
 
-        let g:ale_linters = {
-        \ 'javascript': ['eslint'],
-        \ 'typescript': ['tsserver', 'tslint'],
-        \}
-        let g:ale_fixers = {}
-        let g:ale_fixers['javascript'] = ['prettier']
-    let g:ale_fixers['typescript'] = ['prettier', 'tslint']
-        let g:ale_fixers['json'] = ['prettier']
-        let g:ale_javascript_prettier_use_local_config = 1
-        let g:ale_fix_on_save = 0
+    "    let g:ale_linters = {
+    "    \ 'javascript': ['eslint'],
+    "    \ 'typescript': ['tsserver', 'tslint'],
+    "    \}
+    "    let g:ale_fixers = {}
+    "    let g:ale_fixers['javascript'] = ['prettier']
+    "    let g:ale_fixers['typescript'] = ['prettier', 'tslint']
+    "    let g:ale_fixers['json'] = ['prettier']
+    "    let g:ale_javascript_prettier_use_local_config = 1
+    "    let g:ale_fix_on_save = 0
     " }}}
 " }}}
 
 " Language-Specific Configuration {{{
     " JavaScript {{{
-        Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
-        Plug 'moll/vim-node', { 'for': 'javascript' }
-        Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
+    "    Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html'] }
+    "    Plug 'moll/vim-node', { 'for': 'javascript' }
+    "    Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'npm install' }
     " }}}
 
     " TypeScript {{{
-        Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-        Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+    "    Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+    "    Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
-    Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
-        let g:tsuquyomi_completion_detail = 1
-        let g:tsuquyomi_disable_default_mappings = 1
-        let g:tsuquyomi_completion_detail = 1
+    "Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
+    "    let g:tsuquyomi_completion_detail = 1
+    "    let g:tsuquyomi_disable_default_mappings = 1
+    "    let g:tsuquyomi_completion_detail = 1
     " }}}
 
     " markdown {{{
         Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
         Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-
-        " Open markdown files in Marked.app - mapped to <leader>m
-        Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' }
-        nmap <leader>m :MarkedOpen!<cr>
-        nmap <leader>mq :MarkedQuit<cr>
-        nmap <leader>* *<c-o>:%s///gn<cr>
     " }}}
 
     " TOML {{{
