@@ -8,7 +8,7 @@ error_symbol = '[⟩](bold red)'
 
 [cmd_duration]
 format = '\([$duration](bold yellow)\) '
-min_time = 5_000
+min_time = 10_000
 style = 'bold yellow'
 
 [directory]
@@ -33,6 +33,6 @@ style = 'bold red'
 conflicted = '!'
 untracked = '?'
 modified = '±'
-stashed = ''
+stashed = '☉'
 renamed = ''
 

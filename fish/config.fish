@@ -11,3 +11,4 @@ set -g -x PATH /bin /sbin /usr/local/sbin /usr/bin /usr/sbin $RUSTPATH/bin $SRC_
 source /Users/tom/.config/fish/aliases
 set fish_greeting ''
 
+starship init fish | source
