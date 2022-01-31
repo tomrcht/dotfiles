@@ -1,16 +1,30 @@
+# #
+# Tools
+# #
 alias cc='clang -Wall -Wextra -Werror -Wshadow'
 alias ccd='cc -g3'
 alias gdb='gdb -q'
 alias valeak='valgrind --leak-check=full'
 alias vatrack='valgrind -v --track-origins=yes'
 alias ldd='otool -L'
+
+# #
+# git
+# #
+alias gsw='git switch (git branch --all | fzf | tr -d `[:space:]`)'
+
+# #
+# Other
+# #
 alias v='nvim'
 alias python='python3'
 alias py2='python2.7'
+
 alias ls='exa'
 alias l='exa -laa'
 alias ll='exa -l'
 alias tree='exa --tree'
+
 alias top='htop'
 alias p='ping 8.8.8.8'
 alias ydl='youtube-dl'
