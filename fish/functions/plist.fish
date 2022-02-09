@@ -1,4 +1,4 @@
 # Defined interactively
 function plist
-/usr/libexec/PlistBuddy $argv;
+  /usr/libexec/PlistBuddy $argv;
 end

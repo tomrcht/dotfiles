@@ -12,6 +12,7 @@ alias ldd='otool -L'
 # git
 # #
 alias gsw='git switch (git branch --all | fzf | tr -d `[:space:]`)'
+alias gpu='git push -u origin (git rev-parse --abbrev-ref HEAD)'
 
 # #
 # Other
