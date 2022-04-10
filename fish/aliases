@@ -17,6 +17,8 @@ alias gpu='git push -u origin (git rev-parse --abbrev-ref HEAD)'
 # #
 # Other
 # #
+alias mv='mv -i'
+
 alias v='nvim'
 alias python='python3'
 alias py2='python2.7'
