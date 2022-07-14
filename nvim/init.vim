@@ -391,7 +391,7 @@ call plug#end()
 " Colorscheme and final setup {{{
     set background=dark
     let ayucolor="dark"
-    colorscheme gruvbox
+    colorscheme ayu
     let g:enable_italic_font = 1
     let g:enable_bold_font = 1
     syntax on
