@@ -1,0 +1,61 @@
+## Sets wether or not Yabai should handle windows
+## `bsp`   -> true
+## `float` -> false (default)
+yabai -m config layout bsp
+## Override this behavior on the third desktop
+yabai -m config --space 3 layout float
+
+## Padding
+yabai -m config top_padding 24
+yabai -m config bottom_padding 24
+yabai -m config left_padding 24
+yabai -m config right_padding 24
+yabai -m config window_gap 8
+
+## Sets if Yabai should keep the same ratio for every open window
+## values  : on / off
+## default : false
+yabai -m config auto_balance off
+## if off, this value defines the ratio between the different window
+## values  : between 0 and 1
+## default : 0.5 (each window occupies the same space)
+yabai -m config split_raio 0.5
+
+## Sets the mouse modifier key
+## default : fn
+yabai -m config mouse_modifier fn
+## Sets the modifier + left click action
+## default : move window
+yabai -m config mouse_action1 move
+## Sets the modifier + right click action
+## default : resize window
+yabai -m config mouse_action2 resize
+## Sets wether or not focus should shift on mouse movement
+## values  : off / autoraise / autofocus
+## default : off
+yabai -m config focus_follow_mouse off
+## ... and if the mouse should move to the focused window on raise
+yabai -m config mouse_follow_focus off
+
+## Sets wether or not floating window should always be in the foreground
+yabai -m config window_topmost off
+## Sets wether or not shadow is visible
+## values  : on / off / float
+## default : on
+yabai -m config window_shadow on
+
+## Controls window opacity
+## values  : on / off
+## default : off
+yabai -m config window_opacity off
+yabai -m config active_window_opacity 1
+yabai -m config normal_window_opacity 0.9
+
+## Sets the window borders
+yabai -m config window_border on
+yabai -m config window_border_blur off
+yabai -m config window_border_width 2
+yabai -m config window_border_radius 8
+yabai -m config active_window_border_color 0xFFFF4049
+yabai -m config normal_window_border_color 0xFFC5CFF5
+yabai -m config insert_feedback_color 0xFFD75F5F

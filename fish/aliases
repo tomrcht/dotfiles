@@ -1,6 +1,4 @@
-# #
-# Tools
-# #
+#@ Tools
 alias cc='clang -Wall -Wextra -Werror -Wshadow'
 alias ccd='cc -g3'
 alias gdb='gdb -q'
@@ -8,15 +6,14 @@ alias valeak='valgrind --leak-check=full'
 alias vatrack='valgrind -v --track-origins=yes'
 alias ldd='otool -L'
 
-# #
-# git
-# #
+## git
 alias gsw='git switch (git branch --all | fzf | tr -d `[:space:]`)'
 alias gpu='git push -u origin (git rev-parse --abbrev-ref HEAD)'
 
-# #
-# Other
-# #
+## Yabai
+alias yabaim='yabai -m'
+
+## Other
 alias mv='mv -i'
 
 alias v='nvim'
@@ -30,4 +27,4 @@ alias tree='exa --tree'
 
 alias top='htop'
 alias p='ping 8.8.8.8'
-alias ydl='youtube-dl'
+

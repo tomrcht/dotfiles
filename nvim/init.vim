@@ -385,13 +385,16 @@ call plug#begin('~/.config/nvim/plugged')
 
     Plug 'morhetz/gruvbox'
     Plug 'ayu-theme/ayu-vim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Colorscheme and final setup {{{
     set background=dark
-    let ayucolor="dark"
-    colorscheme ayu
+    " let ayucolor="dark"
+    let g:catppuccin_flavour = 'macchiato'
+    colorscheme catppuccin
+
     let g:enable_italic_font = 1
     let g:enable_bold_font = 1
     syntax on
