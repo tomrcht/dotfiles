@@ -1,10 +1,15 @@
 format = """
-($cmd_duration)· ($directory)($git_branch)($git_status)($git_commit)
+($env_var)($cmd_duration)· ($directory)($git_branch)($git_status)($git_commit)
 $character"""
 
 [character]
 success_symbol = '[⟩](bold white)'
 error_symbol = '[⟩](bold red)'
+
+[env_var]
+variable = "PRIVATE"
+format = '[☉](bold red) '
+style = 'bold red'
 
 [cmd_duration]
 format = '\([$duration](bold yellow)\) '
