@@ -392,7 +392,7 @@ call plug#end()
 " Colorscheme and final setup {{{
     set background=dark
     " let ayucolor="dark"
-    let g:catppuccin_flavour = 'macchiato'
+    let g:catppuccin_flavour = 'mocha'
     colorscheme catppuccin
 
     let g:enable_italic_font = 1
