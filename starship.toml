@@ -17,9 +17,7 @@ min_time = 10_000
 style = 'bold yellow'
 
 [directory]
-format = '[$path](bold cyan) [$read_only]($read_only_style)'
-truncation_length = 8
-truncation_symbol = "…/"
+format = '[$path](bold purple) [$read_only]($read_only_style)'
 read_only = 'read only'
 read_only_style = 'bold red'
 
@@ -30,7 +28,7 @@ style = 'bold white'
 [git_commit]
 format = ' [\($hash\)]($style)'
 only_detached = false
-style = 'bold blue'
+style = 'bold purple'
 
 [git_status]
 format = '([$all_status$ahead_behind]($style))'
